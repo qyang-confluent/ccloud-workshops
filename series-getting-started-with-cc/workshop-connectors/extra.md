@@ -48,10 +48,12 @@ You already set up your Confluent Cloud account, including creating your first b
 
  
 ## <a name="step-1"></a>**Download and install Confluent CLI**
-1. Download the Confluent CLI from [here](https://docs.confluent.io/confluent-cli/current/install.html#tarball-or-zip-installation), choose the package for your system. You can also use scripted installation if you are running it on Linux or Mac, here is command 
+1. Download the Confluent CLI from [here](https://docs.confluent.io/confluent-cli/current/install.html#tarball-or-zip-installation), choose the package for your system. You can also use scripted installation.
+
+You can also run the CLI in a docker container
+
 ```
-curl -sL --http1.1 https://cnfl.io/cli | sh -s -- latest
-export PATH=$(pwd)/bin:$PATH
+docker run -it --rm confluentinc/confluent-cli:latest bash
 ```
 
 The confluent cli will be installed in ./bin directory, so you need to add it to your path.
