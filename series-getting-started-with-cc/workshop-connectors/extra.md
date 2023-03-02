@@ -75,30 +75,43 @@ An environment contains clusters and its deployed components such as Connectors,
 
 
 ```
-confluent env list
+c6ebebbd8823:/# confluent env list
+  Current |     ID     |  Name
+----------+------------+----------
+          | env-ymgzx6 | dev
+  *       | env-r52q29 | default
+  
+c6ebebbd8823:/# confluent env use env-ymgzx6
+Now using "env-ymgzx6" as the default (active) environment.
 
-confluent use env-xxxxx
+c6ebebbd8823:/# confluent kafka cluster list
+None found.
 
-confluent kafka cluster list
-
-C02G653GMD6T:Downloads qyang$ confluent kafka cluster  create sandbox-east --type standard --cloud aws --region us-east-1
+c6ebebbd8823:/# confluent kafka cluster  create sandbox-east --type standard --cloud aws --region us-east-1
 It may take up to 5 minutes for the Kafka cluster to be ready.
-+--------------+---------------------------------------------------------+
-| Id           | lkc-xxxxxx                                              |
-| Name         | sandbox-east                                            |
-| Type         | STANDARD                                                |
-| Ingress      |                                                     250 |
-| Egress       |                                                     750 |
-| Storage      | Infinite                                                |
-| Provider     | aws                                                     |
-| Availability | single-zone                                             |
-| Region       | us-east-1                                               |
-| Status       | UP                                                      |
-| Endpoint     | SASL_SSL://pkc-xxxxx.us-east-1.aws.confluent.cloud:9092 |
-| ApiEndpoint  | https://pkac-xxxxx.us-east-1.aws.confluent.cloud        |
-| RestEndpoint | https://pkc-xxxxx.us-east-1.aws.confluent.cloud:443     |
-+--------------+---------------------------------------------------------+
-confleunt use kafka cluster lkc-xxxxx
++----------------------+---------------------------------------------------------+
+| Current              | false                                                   |
+| ID                   | lkc-3r6vz2                                              |
+| Name                 | sandbox-east                                            |
+| Type                 | STANDARD                                                |
+| Ingress Limit (MB/s) |                                                     250 |
+| Egress Limit (MB/s)  |                                                     750 |
+| Storage              | Infinite                                                |
+| Provider             | aws                                                     |
+| Region               | us-east-1                                               |
+| Availability         | single-zone                                             |
+| Status               | PROVISIONING                                            |
+| Endpoint             | SASL_SSL://pkc-n00kk.us-east-1.aws.confluent.cloud:9092 |
+| REST Endpoint        | https://pkc-n00kk.us-east-1.aws.confluent.cloud:443     |
++----------------------+---------------------------------------------------------+
+
+c6ebebbd8823:/# confluent kafka cluster list
+  Current |     ID     |     Name     |   Type   | Provider |  Region   | Availability | Status
+----------+------------+--------------+----------+----------+-----------+--------------+---------
+          | lkc-3r6vz2 | sandbox-east | STANDARD | aws      | us-east-1 | single-zone  | UP
+
+c6ebebbd8823:/# confluent kafka cluster use lkc-3r6vz2
+Set Kafka cluster "lkc-3r6vz2" as the active cluster for environment "env-ymgzx6".
 ```
 
 
