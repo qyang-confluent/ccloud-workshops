@@ -142,17 +142,48 @@ Save the API key and secret. The secret is not retrievable later.
 1. We created service account and API key pair with it, but we didn't grant any permission to the server account. The SA account is not able to access anything yet. We will need to grant the permission using Confleunt Cloud RBAC. Keep in mind RBAC is only available for Standard and Dedicated cluster type. This is the reason why we need create a standard cluster for this part.
 
 ```
-confluent iam rbac role-binding  list --principal User:dev-sa
-c6ebebbd8823:/# confluent iam rbac role-binding create  --principal User:dev-sa --role CloudClusterAdmin --cloud-cluster lkc-3r6vz2 --environment env-ymgzx6
+c6ebebbd8823:/# confluent iam rbac role-binding create  --principal User:sa-pjj8o2 --role CloudClusterAdmin --cloud-cluster lkc-3r6vz2 --environment env-ymgzx6
++-----------+-------------------+
+| Principal | User:sa-pjj8o2    |
+| Role      | CloudClusterAdmin |
++-----------+-------------------+
 ```
 
 ## <a name="step-6"></a>**Create, Produce and Consume from a topic**
+1. Now the Service Account has permission to manage the cluster. We will test it out using Confluent Cli. We will use the API key pair we created for the testing. 
 ```
-confluent kafka topic create
-confluent kafka topic produce
-confluent kafka topic consume --from-beginning
+confluent  api-key use api-key-xxxxxxx --resource lkc-3r6vz2
+Set API Key "xxxxxxxxxx" as the active API key for "lkc-3r6vz2".
 ```
 
+2. Once we set the key for cluster. Confluent CLI will use the key to access the kafka cluster
+```
+c6ebebbd8823:/# confluent kafka topic create testme
+Created topic "testme".
+
+c6ebebbd8823:/# confluent kafka topic produce testme
+Starting Kafka Producer. Use Ctrl-C or Ctrl-D to exit.
+hello
+kakfa
+
+c6ebebbd8823:/# confluent kafka topic consume --from-beginning testme
+Starting Kafka Consumer. Use Ctrl-C to exit.
+kakfa
+hello
+^CStopping Consumer.
+```
+
+3. Remove the role-binding and try consume from topic again(wait a few minutes for RBAC to apply before you do next command)
+```
+c6ebebbd8823:/# confluent iam rbac role-binding delete  --principal User:sa-pjj8o2 --role CloudClusterAdmin --cloud-cluster lkc-3r6vz2 --environment env-ymgzx6
+Are you sure you want to delete this role binding? (y/n): y
++-----------+-------------------+
+| Principal | User:sa-pjj8o2    |
+| Role      | CloudClusterAdmin |
++-----------+-------------------+
+
+c6ebebbd8823:/# confluent kafka topic consume --from-beginning testme
+```
 ## <a name="step-12"></a>**Clean Up Resources**
 ```
 confluent kafka cluster delete
