@@ -185,12 +185,31 @@ Are you sure you want to delete this role binding? (y/n): y
 c6ebebbd8823:/# confluent kafka topic consume --from-beginning testme
 ```
 ## <a name="step-12"></a>**Clean Up Resources**
+
+1. Remove the cluster and Service account.
 ```
-confluent kafka cluster delete
-confluent iam serviceaccount delete
+c6ebebbd8823:/# confluent kafka cluster list
+  Current |     ID     |     Name     |   Type   | Provider |  Region   | Availability | Status
+----------+------------+--------------+----------+----------+-----------+--------------+---------
+  *       | lkc-3r6vz2 | sandbox-east | STANDARD | aws      | us-east-1 | single-zone  | UP
+
+c6ebebbd8823:/# confluent kafka cluster delete lkc-3r6vz2
+Are you sure you want to delete Kafka cluster "lkc-3r6vz2"?
+To confirm, type "sandbox-east". To cancel, press Ctrl-C: sandbox-east
+Deleted Kafka cluster "lkc-3r6vz2".
+
+c6ebebbd8823:/# confluent iam service-account list
+     ID     |  Name  |   Description
+------------+--------+------------------
+  sa-pjj8o2 | app-sa | sa for demo app
+
+c6ebebbd8823:/# confluent iam service-account delete sa-pjj8o2
+Are you sure you want to delete service account "sa-pjj8o2"?
+To confirm, type "app-sa". To cancel, press Ctrl-C: app-sa
+Deleted service account "sa-pjj8o2".
 ```
 
-Deleting the resources you created during this workshop will prevent you from incurring additional charges.
+**Deleting the resources you created during this workshop will prevent you from incurring additional charges.**
 
 
 ## <a name="step-13"></a>**Confluent Resources and Further Testing**
