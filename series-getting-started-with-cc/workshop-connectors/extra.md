@@ -60,7 +60,7 @@ export PATH=$(pwd)/bin:$PATH
 The confluent cli will be installed in ./bin directory, so you need to add it to your path.
 
 
-3. Log in to [Confluent Cloud](https://confluent.cloud) and enter your email and password.
+1. Log in and enter your email and password.
 
 ```
 confluent login --save
