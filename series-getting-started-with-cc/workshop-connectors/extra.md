@@ -133,14 +133,17 @@ c6ebebbd8823:/# confluent iam  service-account create app-sa --description "sa f
 ## <a name="step-4"></a>**Create an API Key Pair**
 1. Now you will create a service account and API key pair.
 ```
-confluent api-key create
-confluent api-key use key --resource
+c6ebebbd8823:/# confluent  api-key create --service-account sa-pjj8o2 --resource lkc-3r6vz2
+It may take a couple of minutes for the API key to be ready.
+Save the API key and secret. The secret is not retrievable later.
 ```
 
 ## <a name="step-5"></a>**Service Account - Access Control with RBAC**
-```
-confluent iam rolebinding
+1. We created service account and API key pair with it, but we didn't grant any permission to the server account. The SA account is not able to access anything yet. We will need to grant the permission using Confleunt Cloud RBAC. Keep in mind RBAC is only available for Standard and Dedicated cluster type. This is the reason why we need create a standard cluster for this part.
 
+```
+confluent iam rbac role-binding  list --principal User:dev-sa
+c6ebebbd8823:/# confluent iam rbac role-binding create  --principal User:dev-sa --role CloudClusterAdmin --cloud-cluster lkc-3r6vz2 --environment env-ymgzx6
 ```
 
 ## <a name="step-6"></a>**Create, Produce and Consume from a topic**
