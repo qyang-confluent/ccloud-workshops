@@ -47,9 +47,7 @@
 ***
 
 ## **Objective:**
-During the workshop, you already set up your Confluent Cloud account, including creating your first basic cluster and topic, and setting up Schema Registry. 
-
-Now, you will use Confluent CLI to set up a Standard cluster and create Service Account for your application development.
+You already set up your Confluent Cloud account, including creating your first basic cluster and topic using Web UI, and setting up Schema Registry. Now, you will use Confluent CLI to set up a Standard cluster and create Service Account for your application development.
 
  
 ## <a name="step-1"></a>**Download and install Confluent CLI**
