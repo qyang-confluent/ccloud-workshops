@@ -19,7 +19,8 @@
 1. [Fully-Managed AWS S3 Sink / Azure Blob Storage Sink / Google Cloud Storage Sink Connectors](#step-10)
 1. [Confluent Cloud Schema Registry](#step-11)
 1. [Clean Up Resources](#step-12)
-1. [Confluent Resources and Further Testing](#step-13)
+1. [Extra Credit](#step-13)
+1. [Confluent Resources and Further Testing](#step-14)
 
 ***
 
@@ -543,7 +544,10 @@ Deleting the resources you created during this workshop will prevent you from in
 
 4. Finally, go to the Docker Dashboard, and stop the container.
 
-## <a name="step-13"></a>**Confluent Resources and Further Testing**
+## <a name="step-13"></a>**Extra Credit**
+[Here](https://github.com/qyang-confluent/workshops/blob/master/series-getting-started-with-cc/workshop-connectors/extra.md) if you like to learn how to use Confluent CLI with Confluent Cloud.
+
+## <a name="step-14"></a>**Confluent Resources and Further Testing**
 
 * [Confluent Cloud Documentation](https://docs.confluent.io/cloud/current/overview.html)
 
