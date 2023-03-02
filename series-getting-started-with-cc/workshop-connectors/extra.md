@@ -1,1 +1,138 @@
 
+<div align="center" padding=25px>
+    <img src="images/confluent.png" width=50% height=50%>
+</div>
+
+# <div align="center">Manage Confluent Cloud with CLI</div>
+## <div align="center">Lab Guide - Extra</div>
+<br>
+
+## **Agenda**
+
+1. [Download Confluent Cli](#step-1)
+1. [Create a Standard Cluster](#step-2)
+1. [Create a Service Account](#step-3)
+1. [Create an API Key Pair](#step-4)
+1. [RBAC - Create Role Binding for Service Account](#step-5)
+1. [CLI - Create, Produce and Consume from Topic](#step-6)
+1. [Clean Up Resources](#step-12)
+
+
+## **Prerequisites**
+<br>
+
+1. Confluent Cloud Account
+    - Sign-up for a Confluent Cloud account [here](https://www.confluent.io/confluent-cloud/tryfree/)
+    - Once you have signed up and logged in, You are ready to create your cluster.
+
+    > **Note:** You will create resources during this workshop that will incur costs. When you sign up for a Confluent Cloud account, you will get free credits to use in Confluent Cloud. This will cover the cost of resources created during the workshop. More details on the specifics can be found [here](https://www.confluent.io/confluent-cloud/tryfree/).
+
+2. Ports 443 and 9092 need to be open to the public internet for outbound traffic. To check, try accessing the following from your web browser:
+    - portquiz.net:443
+    - portquiz.net:9092
+
+1. This workshop requires access to a command line interface.
+    * **Mac users:** The standard Terminal application or iTerm2 are recommended.
+    * **Windows users:** The built-in Command Prompt or Git BASH are recommended.  
+
+1. Git access, see [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for installation instructions. After installation, verify that the installation was successful with the following command:
+    ```bash
+    # Check the git version
+    git --version
+    ```
+
+1. This workshop requires `docker`. Download *Docker Desktop* [here](https://www.docker.com/products/docker-desktop). After installation, verify that the installation was successful with the following command:
+    ```bash
+    # Check the docker version
+    docker --version
+    ```
+
+  > **Note:** You will be deploying Confluent Platform services and connecting them to Confluent Cloud. There are multiple ways to install Confluent Platform, which you can view in [On-Premises Deployments](https://docs.confluent.io/platform/current/installation/installing_cp/overview.html). In order to make the set up easier for those running different operating systems during the workshop, you will walk through setting up Confluent Platform using Docker. You can accomplish the steps in this lab guide using any of the other deployment methods.
+
+
+
+
+
+***
+
+## **Objective:**
+During the workshop, you already set up your Confluent Cloud account, including creating your first basic cluster and topic, and setting up Schema Registry. 
+
+Now, you will use Confluent CLI to set up a Standard cluster and create Service Account for your application development.
+
+ 
+## <a name="step-1"></a>**Download and install Confluent CLI**
+1. Log in to [Confluent Cloud](https://confluent.cloud) and enter your email and password.
+
+<div align="center" padding=25px>
+    <img src="images/login.png" width=50% height=50%>
+</div>
+
+2. If you are logging in for the first time, you will see a self-guided wizard that walks you through spinning up a cluster. Please minimize this as you will walk through those steps in this workshop. 
+
+*** 
+
+## <a name="step-2"></a>**Create an Environment and Cluster**
+
+An environment contains clusters and its deployed components such as Connectors, ksqlDB, and Schema Registry. You have the ability to create different environments based on your company's requirements. Confluent has seen companies use environments to separate Development/Testing, Pre-Production, and Production clusters.
+
+1. Click **+ Add Environment**. Specify an **Environment Name** and Click **Create**. 
+
+    >**Note:** There is a *default* environment ready in your account upon account creation. You can use this *default* environment for the purpose of this workshop if you do not wish to create an additional environment.
+
+   > **Note:** Confluent Cloud clusters are available in 3 types: Basic, Standard, and Dedicated. Basic is intended for development use cases so you will use that for the workshop. Basic clusters only support single zone availability. Standard and Dedicated clusters are intended for production use and support Multi-zone deployments. If you are interested in learning more about the different types of clusters and their associated features and limits, refer to this [documentation](https://docs.confluent.io/current/cloud/clusters/cluster-types.html).
+
+
+```
+confluent env list
+confluent use env-id
+confluent kafka cluster list
+confluent create kafka cluster
+confleunt use kafka cluster
+```
+
+
+
+ 
+
+
+
+## <a name="step-4"></a>**Create Service Account with API Key Pair**
+
+```
+confluent iam serviceaccount create
+confluent api-key create
+confluent api-key use key --resource
+```
+
+## <a name="step-5"></a>**Enable Schema Registry**
+
+
+## **<a name="step-6"></a>Set up and Connect Self Managed Services to Confluent Cloud**
+
+## <a name="step-7"></a>**Deploy: Connect Self Managed Services to Confluent Cloud**
+
+## <a name="step-10"></a>**Fully-Managed AWS S3 Sink / Azure Blob Storage Sink / Google Cloud Storage Sink Connectors**
+
+
+## <a name="step 11"></a>**Confluent Cloud Schema Registry**
+
+
+## <a name="step-12"></a>**Clean Up Resources**
+
+Deleting the resources you created during this workshop will prevent you from incurring additional charges.
+
+
+## <a name="step-13"></a>**Confluent Resources and Further Testing**
+
+* [Confluent Cloud Documentation](https://docs.confluent.io/cloud/current/overview.html)
+
+* [Confluent Connectors](https://www.confluent.io/hub/) - A recommended next step after the workshop is to deploy a connector of your choice.
+
+* [Confluent Cloud Schema Registry](https://docs.confluent.io/cloud/current/client-apps/schemas-manage.html#)
+
+* [Best Practices for Developing Apache Kafka Applications on Confluent Cloud](https://assets.confluent.io/m/14397e757459a58d/original/20200205-WP-Best_Practices_for_Developing_Apache_Kafka_Applications_on_Confluent_Cloud.pdf) 
+
+* [Confluent Cloud Demos and Examples](https://docs.confluent.io/platform/current/tutorials/examples/ccloud/docs/ccloud-demos-overview.html)
+
+* [Kafka Connect Deep Dive – Error Handling and Dead Letter Queues](https://www.confluent.io/blog/kafka-connect-deep-dive-error-handling-dead-letter-queues/)
