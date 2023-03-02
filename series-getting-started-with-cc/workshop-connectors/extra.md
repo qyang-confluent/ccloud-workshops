@@ -97,10 +97,10 @@ confluent api-key create
 confluent api-key use key --resource
 ```
 
-## <a name="step-5"></a>**Enable Schema Registry**
+## <a name="step-5"></a>**Service Account - Access Control with RBAC**
 
 
-## **<a name="step-6"></a>Set up and Connect Self Managed Services to Confluent Cloud**
+## **<a name="step-6"></a>**Create, Produce and Consume from a topic**
 
 ## <a name="step-7"></a>**Deploy: Connect Self Managed Services to Confluent Cloud**
 
