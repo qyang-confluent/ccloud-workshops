@@ -94,7 +94,7 @@ It may take up to 5 minutes for the Kafka cluster to be ready.
 | ApiEndpoint  | https://pkac-7zz5o.us-east-1.aws.confluent.cloud        |
 | RestEndpoint | https://pkc-n00kk.us-east-1.aws.confluent.cloud:443     |
 +--------------+---------------------------------------------------------+
-confleunt use kafka cluster
+confleunt use kafka cluster lkc-xxxxx
 ```
 
 
