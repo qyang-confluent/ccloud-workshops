@@ -4,7 +4,7 @@
 </div>
 
 # <div align="center">Manage Confluent Cloud with CLI</div>
-## <div align="center">Lab Guide - Extra</div>
+## <div align="center">Lab Guide</div>
 <br>
 
 ## **Agenda**
