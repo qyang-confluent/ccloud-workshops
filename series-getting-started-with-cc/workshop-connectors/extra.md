@@ -119,7 +119,12 @@ Set Kafka cluster "lkc-3r6vz2" as the active cluster for environment "env-ymgzx6
  
 ## <a name="step-3"></a>**Create Service Account**
 ```
-confluent iam serviceaccount create
+c6ebebbd8823:/# confluent iam  service-account create app-sa --description "sa for demo app"
++-------------+-----------------+
+| ID          | sa-pjj8o2       |
+| Name        | app-sa          |
+| Description | sa for demo app |
++-------------+-----------------+
 ```
 
 ## <a name="step-4"></a>**Create an API Key Pair**
