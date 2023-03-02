@@ -36,7 +36,7 @@
 
 1. Confluent Cloud Account
     - Sign-up for a Confluent Cloud account [here](https://www.confluent.io/confluent-cloud/tryfree/)
-    - Once you have signed up and logged in, click on the menu icon at the upper right hand corner, click on "Billing & payment", then enter payment details under “Payment details & contacts”. A screenshot of the billing UI is included below.
+    - Once you have signed up and logged in, You are ready to create your cluster.
 
     > **Note:** You will create resources during this workshop that will incur costs. When you sign up for a Confluent Cloud account, you will get free credits to use in Confluent Cloud. This will cover the cost of resources created during the workshop. More details on the specifics can be found [here](https://www.confluent.io/confluent-cloud/tryfree/).
 
@@ -76,16 +76,16 @@
         - AWS: Follow the directions outlined in [IAM Policy for S3](https://docs.confluent.io/cloud/current/connectors/cc-s3-sink.html#cc-s3-bucket-policy)
         - GCP:  Your GCP service account role must have permission to create new objects in the GCS bucket. For example, the Storage Admin role can be selected for this purpose. If you are concerned about security and do not want to use the Storage Admin role, only use the storage.objects.get and storage.objects.create roles. Also, note that the Storage Object Admin role does not work for this purpose.
 
-1. Clone Confluent's Commercial SE workshop repository to your machine to access useful files. 
-    > **Note:** This repository contains **all** of the workshops and workshop series Confluent's Commercial SE team has created. Be sure to navigate to the correct sub-folder to use the right content.
+1. Clone Confluent's workshop repository to your machine to access useful files. 
+    > **Note:** This repository contains **all** of the workshops and workshop series. Be sure to navigate to the correct sub-folder to use the right content.
     ```bash
-    # clone the Commercial SE workshop repository
-    git clone https://github.com/confluentinc/commercial-workshops.git
+    # clone the workshop repository
+    git clone https://github.com/qyang-confluent/workshops.git
     ```
     Navigate to the correct sub-folder to access this labs content. This should act as your working directory for the remainder of the lab. 
     ```bash 
     # navigate to the correct sub-folder
-    cd commercial-workshops/series-getting-started-with-cc/workshop-connectors/
+    cd workshops/series-getting-started-with-cc/workshop-connectors/
     ```
 
 ***
