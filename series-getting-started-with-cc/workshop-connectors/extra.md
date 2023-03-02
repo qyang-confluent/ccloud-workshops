@@ -34,12 +34,9 @@
     - portquiz.net:443
     - portquiz.net:9092
 
-1. This workshop requires access to a command line interface.
+3. This workshop requires access to a command line interface.
     * **Mac users:** The standard Terminal application or iTerm2 are recommended.
     * **Windows users:** The built-in Command Prompt or Git BASH are recommended.  
-
-
-
 
 
 
@@ -60,7 +57,7 @@ export PATH=$(pwd)/bin:$PATH
 The confluent cli will be installed in ./bin directory, so you need to add it to your path.
 
 
-1. Log in and enter your email and password.
+2. Log in and enter your email and password.
 
 ```
 confluent login --save
@@ -87,23 +84,35 @@ confleunt use kafka cluster
 
  
 ## <a name="step-3"></a>**Create Service Account**
-
+```
+confluent iam serviceaccount create
+```
 
 ## <a name="step-4"></a>**Create an API Key Pair**
 1. Now you will create a service account and API key pair.
 ```
-confluent iam serviceaccount create
 confluent api-key create
 confluent api-key use key --resource
 ```
 
 ## <a name="step-5"></a>**Service Account - Access Control with RBAC**
+```
+confluent iam rolebinding
 
+```
 
 ## <a name="step-6"></a>**Create, Produce and Consume from a topic**
-
+```
+confluent kafka topic create
+confluent kafka topic produce
+confluent kafka topic consume --from-beginning
+```
 
 ## <a name="step-12"></a>**Clean Up Resources**
+```
+confluent kafka cluster delete
+confluent iam serviceaccount delete
+```
 
 Deleting the resources you created during this workshop will prevent you from incurring additional charges.
 
