@@ -545,7 +545,7 @@ Deleting the resources you created during this workshop will prevent you from in
 4. Finally, go to the Docker Dashboard, and stop the container.
 
 ## <a name="step-13"></a>**Confluent Resources and Further Testing**
-If you are interested, [here](https://github.com/qyang-confluent/workshops/edit/master/series-getting-started-with-cc/workshop-connectors/extra.md) is extra learning how to manage Confluent Cloud with Confluent CLI.
+If you are interested, [here](https://github.com/qyang-confluent/workshops/blob/6c86ee14b9d4bb8eb5357e0505ffda1989dcc778/series-getting-started-with-cc/workshop-connectors/extra.md) is extra learning how to manage Confluent Cloud with Confluent CLI.
 	
 ## <a name="step-14"></a>**Confluent Resources and Further Testing**
 
