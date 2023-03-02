@@ -53,7 +53,7 @@ You already set up your Confluent Cloud account, including creating your first b
 You can also run the CLI in a docker container
 
 ```
-docker run -it --rm confluentinc/confluent-cli:latest bash
+docker run -it -u root --rm confluentinc/confluent-cli:latest bash
 ```
 
 The confluent cli will be installed in ./bin directory, so you need to add it to your path.
