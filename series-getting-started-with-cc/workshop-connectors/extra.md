@@ -118,6 +118,8 @@ Set Kafka cluster "lkc-3r6vz2" as the active cluster for environment "env-ymgzx6
 
  
 ## <a name="step-3"></a>**Create Service Account**
+1. Now we are going to create a service account. The service account will be used to run the application.
+
 ```
 c6ebebbd8823:/# confluent iam  service-account create app-sa --description "sa for demo app"
 +-------------+-----------------+
@@ -126,6 +128,7 @@ c6ebebbd8823:/# confluent iam  service-account create app-sa --description "sa f
 | Description | sa for demo app |
 +-------------+-----------------+
 ```
+
 
 ## <a name="step-4"></a>**Create an API Key Pair**
 1. Now you will create a service account and API key pair.
