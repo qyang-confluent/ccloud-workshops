@@ -76,7 +76,9 @@ An environment contains clusters and its deployed components such as Connectors,
 confluent env list
 
 confluent use env-xxxxx
+
 confluent kafka cluster list
+
 C02G653GMD6T:Downloads qyang$ confluent kafka cluster  create sandbox-east --type standard --cloud aws --region us-east-1
 It may take up to 5 minutes for the Kafka cluster to be ready.
 +--------------+---------------------------------------------------------+
