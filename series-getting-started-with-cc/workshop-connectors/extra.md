@@ -80,7 +80,7 @@ confluent kafka cluster list
 C02G653GMD6T:Downloads qyang$ confluent kafka cluster  create sandbox-east --type standard --cloud aws --region us-east-1
 It may take up to 5 minutes for the Kafka cluster to be ready.
 +--------------+---------------------------------------------------------+
-| Id           | lkc-nwpndv                                              |
+| Id           | lkc-xxxxxx                                              |
 | Name         | sandbox-east                                            |
 | Type         | STANDARD                                                |
 | Ingress      |                                                     250 |
@@ -90,9 +90,9 @@ It may take up to 5 minutes for the Kafka cluster to be ready.
 | Availability | single-zone                                             |
 | Region       | us-east-1                                               |
 | Status       | UP                                                      |
-| Endpoint     | SASL_SSL://pkc-n00kk.us-east-1.aws.confluent.cloud:9092 |
-| ApiEndpoint  | https://pkac-7zz5o.us-east-1.aws.confluent.cloud        |
-| RestEndpoint | https://pkc-n00kk.us-east-1.aws.confluent.cloud:443     |
+| Endpoint     | SASL_SSL://pkc-xxxxx.us-east-1.aws.confluent.cloud:9092 |
+| ApiEndpoint  | https://pkac-xxxxx.us-east-1.aws.confluent.cloud        |
+| RestEndpoint | https://pkc-xxxxx.us-east-1.aws.confluent.cloud:443     |
 +--------------+---------------------------------------------------------+
 confleunt use kafka cluster lkc-xxxxx
 ```
