@@ -86,10 +86,10 @@ confleunt use kafka cluster
 
 
  
+## <a name="step-3"></a>**Create Service Account**
 
 
-
-## <a name="step-4"></a>**Create Service Account with API Key Pair**
+## <a name="step-4"></a>**Create an API Key Pair**
 1. Now you will create a service account and API key pair.
 ```
 confluent iam serviceaccount create
@@ -100,14 +100,7 @@ confluent api-key use key --resource
 ## <a name="step-5"></a>**Service Account - Access Control with RBAC**
 
 
-## **<a name="step-6"></a>**Create, Produce and Consume from a topic**
-
-## <a name="step-7"></a>**Deploy: Connect Self Managed Services to Confluent Cloud**
-
-## <a name="step-10"></a>**Fully-Managed AWS S3 Sink / Azure Blob Storage Sink / Google Cloud Storage Sink Connectors**
-
-
-## <a name="step 11"></a>**Confluent Cloud Schema Registry**
+## <a name="step-6"></a>**Create, Produce and Consume from a topic**
 
 
 ## <a name="step-12"></a>**Clean Up Resources**
