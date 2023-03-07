@@ -249,15 +249,16 @@ Now that you have completed setting up your Confluent Cloud account, cluster, to
     </div>
 
 1. To begin setting up **Connect**, you should have already cloned the repository during the Prerequisites step. If you have not, start by cloning Confluent's Commercial SE workshop repository.
-    > **Note:** This repository contains **all** of the workshops and workshop series led by Confluent's Commercial SE team. Be sure to navigate to the correct sub-directory to access the right content. 
+    > **Note:** This repository contains **all** of the workshops. Be sure to navigate to the correct sub-directory to access the right content. 
     ```bash
-    # Clone Confluent's Commercial SE Workshop repo
-    git clone https://github.com/confluentinc/commercial-workshops
+    # Clone Confluent's Workshop repo
+    git clone https://github.com/qyang-confluent/workshops.git
+
     ```
     Then, navigate to the sub-directory for this lab.
     ```bash
     # Navigate to 'workshop-connectors'
-    cd commercial-workshops/series-getting-started-with-cc/workshop-connectors
+    cd workshops/series-getting-started-with-cc/workshop-connectors
     ```
 
     This directory contains two important supporting files, `setup.properties` and `docker-compose.yml`. 
