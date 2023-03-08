@@ -346,6 +346,7 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
     </div>
 
 5. As the final step in deploying the self managed PostgreSQL CDC Source connector, you will now create the connector. Enter the following configuration details:
+    
     ```bash
     Name = PostgresSource
     Tasks max = 1
@@ -355,9 +356,24 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
     User = postgres
     Password = confluent2021
     Database = postgres
+    Table Include List = inventory.customers
     ```
+    
+    
 
     If you have networking rules that may not allow for connection to 0.0.0.0, then use *docker.for.mac.host.internal* as the hostname for Mac and use *docker.for.win.localhost* or *postgres*(container name) for Windows.
+    
+    ```bash
+    name = PostgresSource
+    tasks.max = 1
+    database.server.name = dbserver1
+    database.hostname = docker.for.mac.host.internal
+    database.port = 5432
+    database.user = postgres
+    database.password = confluent2021
+    database.dbname = postgres
+    table.include.list = inventory.customers
+    ```
 
 6. Scroll down to the very bottom of the page, click on **Continue**, review the configuration details, then click on **Launch.**
     <div align="center">
