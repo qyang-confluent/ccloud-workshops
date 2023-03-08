@@ -409,7 +409,7 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
     
     Insert a row into tables and verify the change is captured in Kafka.
     ```bash
-    docker exec -it postgres psql -U postgres -d postgres -c "insert into inventory.customers (first_name, last_name, email) values ('Dev', 'Workshop', 'workshop@test.com');"
+    docker exec -it postgres psql -U postgres -d postgres -c "insert into inventory.customers (first_name, last_name, email) values ('Student1', 'Workshop', 's1@workshop.com');"
     ```
 
 ## <a name="step-10"></a>**Fully-Managed AWS S3 Sink / Azure Blob Storage Sink / Google Cloud Storage Sink Connectors**
