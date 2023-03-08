@@ -377,7 +377,7 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
 
 6. Scroll down to the very bottom of the page, click on **Continue**, review the configuration details, then click on **Launch.**
     <div align="center">
-       <img src="images/c3-launch-connector.png" width=75% height=75%>
+       <img src="images/c3-launch-connect-new.png" width=75% height=75%>
     </div>
 
 7. Verify that the connector is running.
