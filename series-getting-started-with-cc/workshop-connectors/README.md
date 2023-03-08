@@ -375,6 +375,7 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
     table.include.list = inventory.customers
     ```
 
+
 6. Scroll down to the very bottom of the page, click on **Continue**, review the configuration details, then click on **Launch.**
     <div align="center">
        <img src="images/c3-launch-connect-new.png" width=75% height=75%>
@@ -405,6 +406,11 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
     </div>
 
     > **Note:** The unrecognized characters are a plaintext representation of Avro.
+    
+    Insert a row into tables and verify the change is captured in Kafka.
+    ```bash
+    docker exec -it postgres psql -U postgres -d postgres -c "insert into inventory.customers (first_name, last_name, email) values ('Dev', 'Workshop', 'workshop@test.com');"
+    ```
 
 ## <a name="step-10"></a>**Fully-Managed AWS S3 Sink / Azure Blob Storage Sink / Google Cloud Storage Sink Connectors**
 
