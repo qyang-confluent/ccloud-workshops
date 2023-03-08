@@ -576,7 +576,7 @@ If you are interested, [here](https://github.com/qyang-confluent/workshops/blob/
 
 * [Confluent Connectors](https://www.confluent.io/hub/) - A recommended next step after the workshop is to deploy a connector of your choice.
 
-	* [Confluent Connector Playground](https://kafka-docker-playground.io/#/)
+* [Confluent Connector Playground](https://kafka-docker-playground.io/#/)
 	
 * [Confluent Cloud Schema Registry](https://docs.confluent.io/cloud/current/client-apps/schemas-manage.html#)
 
