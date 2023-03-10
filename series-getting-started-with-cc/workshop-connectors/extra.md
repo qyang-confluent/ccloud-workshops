@@ -74,7 +74,7 @@ An environment contains clusters and its deployed components such as Connectors,
    > **Note:** Confluent Cloud clusters are available in 3 types: Basic, Standard, and Dedicated. Basic is intended for development use cases so you will use that for the workshop. Basic clusters only support single zone availability. Standard and Dedicated clusters are intended for production use and support Multi-zone deployments. If you are interested in learning more about the different types of clusters and their associated features and limits, refer to this [documentation](https://docs.confluent.io/current/cloud/clusters/cluster-types.html).
 
 
-```bash
+```sh
 c6ebebbd8823:/# confluent env list
   Current |     ID     |  Name
 ----------+------------+----------
