@@ -74,7 +74,7 @@ An environment contains clusters and its deployed components such as Connectors,
    > **Note:** Confluent Cloud clusters are available in 3 types: Basic, Standard, and Dedicated. Basic is intended for development use cases so you will use that for the workshop. Basic clusters only support single zone availability. Standard and Dedicated clusters are intended for production use and support Multi-zone deployments. If you are interested in learning more about the different types of clusters and their associated features and limits, refer to this [documentation](https://docs.confluent.io/current/cloud/clusters/cluster-types.html).
 
 
-```sh
+```
 c6ebebbd8823:/# confluent env list
   Current |     ID     |  Name
 ----------+------------+----------
@@ -120,7 +120,7 @@ Set Kafka cluster "lkc-3r6vz2" as the active cluster for environment "env-ymgzx6
 ## <a name="step-3"></a>**Create Service Account**
 1. Now we are going to create a service account. The service account will be used to run the application.
 
-```bash
+```
 c6ebebbd8823:/# confluent iam  service-account create app-sa --description "sa for demo app"
 +-------------+-----------------+
 | ID          | sa-pjj8o2       |
