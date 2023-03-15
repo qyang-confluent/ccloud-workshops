@@ -364,6 +364,7 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
     If you have networking rules that may not allow for connection to 0.0.0.0, then use *docker.for.mac.host.internal* as the hostname for Mac and use *docker.for.win.localhost* or *postgres*(container name) for Windows.
     
     ```bash
+    connector.class = io.debezium.connector.postgresql.PostgresConnector
     name = PostgresSource
     tasks.max = 1
     database.server.name = dbserver1
